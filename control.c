@@ -23,17 +23,17 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 
 	if(c == '0')
 	{
-		gpio_base[10] = 1 << 25;
+		//gpio_base[10] = 1 << 25;
 		gpio_base[10] = 1 << 24;
-		gpio_base[10] = 1 << 23;
+		//gpio_base[10] = 1 << 23;
 		gpio_base[10] = 1 << 22;
 	}
 	else if(c == '1')
 	{
-		gpio_base[7] = 1 << 25;
+		//gpio_base[7] = 1 << 25;
 		gpio_base[7] = 1 << 24;
 		//gpio_base[7] = 1 << 23;
-		//gpio_base[7] = 1 << 22;
+		gpio_base[7] = 1 << 22;
 	}
 	return 1;
 }
