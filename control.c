@@ -15,6 +15,8 @@ static struct cdev cdv;
 static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
 
+static int usegpio[4] = {22, 23, 24, 25};
+
 static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_t* pos)
 {
 	char c;
@@ -23,17 +25,17 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 
 	if(c == '0')
 	{
-		gpio_base[10] = 1 << 25;
-		gpio_base[10] = 1 << 24;
-		//gpio_base[10] = 1 << 23;
-		//gpio_base[10] = 1 << 22;
+		gpio_base[7] = 1 << 25;
+		gpio_base[7] = 1 << 24;
+		gpio_base[7] = 1 << 23;
+		gpio_base[7] = 1 << 22;
 	}
 	else if(c == '1')
 	{
 		gpio_base[10] = 1 << 25;
 		gpio_base[7] = 1 << 24;
-		//gpio_base[7] = 1 << 23;
-		//gpio_base[7] = 1 << 22;
+		gpio_base[10] = 1 << 23;
+		gpio_base[7] = 1 << 22;
 	}
 	else if(c == '2')
 	{
