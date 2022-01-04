@@ -25,23 +25,38 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 
 	if(c == '0')
 	{
-		gpio_base[7] = 1 << 25;
-		gpio_base[7] = 1 << 24;
-		gpio_base[7] = 1 << 23;
 		gpio_base[7] = 1 << 22;
+		gpio_base[7] = 1 << 23;
+		gpio_base[7] = 1 << 24;
+		gpio_base[7] = 1 << 25;
 	}
 	else if(c == '1')
 	{
-		gpio_base[10] = 1 << 25;
-		gpio_base[7] = 1 << 24;
-		gpio_base[10] = 1 << 23;
 		gpio_base[7] = 1 << 22;
+		gpio_base[10] = 1 << 23;
+		gpio_base[7] = 1 << 24;
+		gpio_base[10] = 1 << 25;
 	}
 	else if(c == '2')
 	{
+		gpio_base[10] = 1 << 22;
+		gpio_base[7] = 1 << 23;
 		gpio_base[10] = 1 << 24;
 		gpio_base[7] = 1 << 25;
 	}
+	else if (c == 'r')
+	{
+		gpio_base[7] = 1 << 22;
+		gpio_base[10] = 1 << 23;
+		gpio_base[10] = 1 << 24;
+		gpio_base[7] = 1 << 25;
+	}
+	else if (c == 'l')
+	{
+		gpio_base[10] = 1 << 22;
+		gpio_base[7] = 1 << 23;
+		gpio_base[7] = 1 << 24;
+		gpio_base[10] = 1 << 25;
 	return 1;
 }
 
@@ -49,6 +64,7 @@ static struct file_operations control_fops = {
 	.owner = THIS_MODULE,
 	.write = led_write
 };
+
 static int __init init_mod(void)
 {
 	int retval;
@@ -59,8 +75,8 @@ static int __init init_mod(void)
 		printk(KERN_ERR "alloc_chrdev_region failed.\n");
 		return retval;
 	}
-	printk(KERN_INFO "%s is loaded. major:%d\n",__FILE__,MAJOR(dev));
 
+	printk(KERN_INFO "%s is loaded. major:%d\n",__FILE__,MAJOR(dev));
 	cdev_init(&cdv, &control_fops);
 	retval = cdev_add(&cdv, dev, 1);
 
@@ -91,6 +107,7 @@ static int __init init_mod(void)
 		const u32 mask = ~(0x7 << shift);
 		gpio_base[index] = (gpio_base[index] & mask) | (0x1 << shift);
 	}
+
 	return 0;
 }
 
