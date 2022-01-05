@@ -16,8 +16,9 @@ static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
 
 static int usegpio[4] = {22, 23, 24, 25};
+int i;
 
-static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_t* pos)
+static ssize_t control_write(struct file* filp, const char* buf, size_t count, loff_t* pos)
 {
 	char c;
 	if(copy_from_user(&c,buf,sizeof(char)))
@@ -46,23 +47,24 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 	}
 	else if (c == 'r')
 	{
+		gpio_base[10] = 1 << 22;
+		gpio_base[7] = 1 << 23;
+		gpio_base[7] = 1 << 24;
+		gpio_base[10] = 1 << 25;
+	}
+	else if (c == 'l')
+	{
 		gpio_base[7] = 1 << 22;
 		gpio_base[10] = 1 << 23;
 		gpio_base[10] = 1 << 24;
 		gpio_base[7] = 1 << 25;
 	}
-	else if (c == 'l')
-	{
-		gpio_base[10] = 1 << 22;
-		gpio_base[7] = 1 << 23;
-		gpio_base[7] = 1 << 24;
-		gpio_base[10] = 1 << 25;
 	return 1;
 }
 
 static struct file_operations control_fops = {
 	.owner = THIS_MODULE,
-	.write = led_write
+	.write = control_write,
 };
 
 static int __init init_mod(void)
@@ -97,13 +99,13 @@ static int __init init_mod(void)
 	device_create(cls, NULL, dev, NULL, "control%d", MINOR(dev));
 	gpio_base = ioremap_nocache(0xfe200000, 0xA0);
 						        
-	int i;
+	//int i;
 
-	for(i = 0; i < 2; i++)
+	for(i = 0; i < 4; i++)
 	{
-		const u32 motor = usegpio[i];
-		const u32 index = motor/10;
-		const u32 shift = (motor%10)*3;
+		const u32 control = usegpio[i];
+		const u32 index = control/10;
+		const u32 shift = (control%10)*3;
 		const u32 mask = ~(0x7 << shift);
 		gpio_base[index] = (gpio_base[index] & mask) | (0x1 << shift);
 	}
