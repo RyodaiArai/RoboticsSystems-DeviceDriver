@@ -24,21 +24,21 @@ static ssize_t control_write(struct file* filp, const char* buf, size_t count, l
 	if(copy_from_user(&c,buf,sizeof(char)))
 	return -EFAULT;
 
-	if(c == '0')
+	if(c == 's')
 	{
-		gpio_base[7] = 1 << 22;
-		gpio_base[7] = 1 << 23;
-		gpio_base[7] = 1 << 24;
-		gpio_base[7] = 1 << 25;
+		gpio_base[10] = 1 << 22;
+		gpio_base[10] = 1 << 23;
+		gpio_base[10] = 1 << 24;
+		gpio_base[10] = 1 << 25;
 	}
-	else if(c == '1')
+	else if(c == 'f')
 	{
 		gpio_base[7] = 1 << 22;
 		gpio_base[10] = 1 << 23;
 		gpio_base[7] = 1 << 24;
 		gpio_base[10] = 1 << 25;
 	}
-	else if(c == '2')
+	else if(c == 'b')
 	{
 		gpio_base[10] = 1 << 22;
 		gpio_base[7] = 1 << 23;
