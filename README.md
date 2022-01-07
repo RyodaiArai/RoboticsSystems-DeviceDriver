@@ -12,12 +12,12 @@ Ubuntu server 20.04.3 LTS
 
 ## Requirements
 | Name | Quantity |
-| :-----: | :-: |
+| :--: | :------: |
 | [Raspberry Pi 4 ModelB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | 1 |
 | [L298N](http://www.hiletgo.com/ProductDetail/1915475.html) | 1 |
 | [DC Motor with Wheel](https://www.amazon.co.jp/-/en/Treedix-Electric-Plastic-Arduino-Electronic/dp/B088NMV7C6/ref=sr_1_1) | 4 |
 | AA Battery | 4 |
-| 4 AA Battery Holder | 1 |
+| [4 AA Battery Holder](https://www.amazon.com/abcGoodefg-Battery-Holder-Switch-Leads/dp/B071XTF3Z9/ref=sr_1_34) | 1 |
 | Jump wire male-to-male | 1 |
 | Jump wire male-to-female | 4 |
 
@@ -25,6 +25,21 @@ Ubuntu server 20.04.3 LTS
 
 ## Schematic
 <img src="https://user-images.githubusercontent.com/71488207/148551537-0493e93f-8110-4c06-87a2-c42404b92d16.png" width="600px">
+
+### Connection
+| GPIO | L298N | Motor | Battery Holder |
+| :--: | :---: | :---: | :-----: |
+| 22 | IN1 ||||
+| 23 | IN2 ||||
+| 24 | IN3 ||||
+| 25 | IN4 ||||
+|| OUT1 | 2 motor+ |||
+|| OUT2 | 2 motor- |||
+|| OUT3 | 2 motor- |||
+|| OUT4 | 2 motor+ |||
+|| +12V || + (Red) |
+|GND PIN | GND || - (Black) |
+
 
 ---
 
@@ -46,23 +61,23 @@ $ sudo chmod 666 /dev/control0
 ```
 
 ## Usage
-Move forward
+### Move forward
 ```
 $ echo f > /dev/control0
 ```
-Move back
+### Move back
 ```
 $ echo b > /dev/control0
 ```
-Stop
+### Stop
 ```
 $ echo s > /dev/control0
 ```
-Right rotation
+### Right rotation
 ```
 $ echo r > /dev/control0
 ```
-Left rotation
+### Left rotation
 ```
 $ echo l > /dev/control0
 ```
