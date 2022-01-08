@@ -99,7 +99,6 @@ static int __init init_mod(void)
 	device_create(cls, NULL, dev, NULL, "control%d", MINOR(dev));
 	gpio_base = ioremap_nocache(0xfe200000, 0xA0);
 						        
-	//int i;
 
 	for(i = 0; i < 4; i++)
 	{
