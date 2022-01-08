@@ -12,22 +12,22 @@ Ubuntu server 20.04.3 LTS
 ---
 
 ## Requirements
-| Name | Quantity |
-| :--: | :------: |
-| [Raspberry Pi 4 ModelB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | 1 |
-| [L298N (Motor driver)](https://www.amazon.co.jp/-/en/VKLSVAN-Stepper-Controller-Compatible-Arduino/dp/B08B87WWHV/ref=sr_1_5) | 1 |
-| [DC Motor with Wheel](https://www.amazon.co.jp/-/en/Treedix-Electric-Plastic-Arduino-Electronic/dp/B088NMV7C6/ref=sr_1_1) | 4 |
-| AA Battery | 4 |
-| [4 AA Battery Holder](https://www.amazon.com/abcGoodefg-Battery-Holder-Switch-Leads/dp/B071XTF3Z9/ref=sr_1_34) | 1 |
-| Jump wire male-to-male | 1 |
-| Jump wire male-to-female | 4 |
+| Name | Quantity | Datasheet |
+| :--: | :------: | :-------: |
+| [Raspberry Pi 4 ModelB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | 1 | [PDF](https://github.com/RyodaiArai/Robotics_Systems-Device_driver/files/7833504/raspberry-pi-4-datasheet.pdf) |
+| [L298N (Motor driver)](https://www.amazon.co.jp/-/en/VKLSVAN-Stepper-Controller-Compatible-Arduino/dp/B08B87WWHV/ref=sr_1_5) | 1 | [PDF](https://github.com/RyodaiArai/Robotics_Systems-Device_driver/files/7833507/l298.pdf)
+| [DC Motor with Wheel](https://www.amazon.co.jp/-/en/Treedix-Electric-Plastic-Arduino-Electronic/dp/B088NMV7C6/ref=sr_1_1) | 4 ||
+| AA Battery | 4 ||
+| [4 AA Battery Holder](https://www.amazon.com/abcGoodefg-Battery-Holder-Switch-Leads/dp/B071XTF3Z9/ref=sr_1_34) | 1 ||
+| Jump wire male-to-male | 1 ||
+| Jump wire male-to-female | 4 ||
 
 ---
 
 ## Schematic
 <img src="https://user-images.githubusercontent.com/71488207/148551537-0493e93f-8110-4c06-87a2-c42404b92d16.png" width="600px">
 
-### Connection
+## Connection
 | GPIO | L298N | Motor | Battery Holder |
 | :--: | :---: | :---: | :-----: |
 | 22 | IN1 ||||
@@ -100,7 +100,7 @@ $ make clean
 
 ## Video
 
-
+[<img src="https://user-images.githubusercontent.com/71488207/148650950-bebfaad0-4e61-44c5-b9ce-ca8a43426572.png" width="600px">](https://www.youtube.com/watch?v=RbxuJ0crwDw)
 
 ---
 
