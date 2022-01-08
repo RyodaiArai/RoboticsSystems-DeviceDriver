@@ -1,3 +1,7 @@
+//	GPL-Ver3.0 License
+//	Copyright (c) 2021, Ryodai Arai & Ryuichi Ueda.
+//	All rights reserved.
+
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/cdev.h>
@@ -14,8 +18,8 @@ static dev_t dev;
 static struct cdev cdv;
 static struct class *cls = NULL;
 static volatile u32 *gpio_base = NULL;
-
 static int usegpio[4] = {22, 23, 24, 25};
+
 int i;
 
 static ssize_t control_write(struct file* filp, const char* buf, size_t count, loff_t* pos)
