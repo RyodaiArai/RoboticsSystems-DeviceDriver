@@ -1,7 +1,8 @@
 # Robotics Systems-Device driver
 
 ## Description
-Created a device driver to control a DC motor based on the [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created in the lecture.
+This device driver was created by modifying a [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor [Ryuichi Ueda](https://lab.ueda.tech/) in a lecture on [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo).
+This device driver controls a 4-wheeled vehicle according to the inputted alphabet (f, b, s, r, l).
 
 ---
 
@@ -14,7 +15,7 @@ Ubuntu server 20.04.3 LTS
 | Name | Quantity |
 | :--: | :------: |
 | [Raspberry Pi 4 ModelB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | 1 |
-| [L298N (Motor driver)](http://www.hiletgo.com/ProductDetail/1915475.html) | 1 |
+| [L298N (Motor driver)](https://www.amazon.co.jp/-/en/VKLSVAN-Stepper-Controller-Compatible-Arduino/dp/B08B87WWHV/ref=sr_1_5) | 1 |
 | [DC Motor with Wheel](https://www.amazon.co.jp/-/en/Treedix-Electric-Plastic-Arduino-Electronic/dp/B088NMV7C6/ref=sr_1_1) | 4 |
 | AA Battery | 4 |
 | [4 AA Battery Holder](https://www.amazon.com/abcGoodefg-Battery-Holder-Switch-Leads/dp/B071XTF3Z9/ref=sr_1_34) | 1 |
@@ -94,6 +95,12 @@ $ sudo rmmod control
 ```
 $ make clean
 ```
+
+---
+
+## Video
+
+
 
 ---
 
