@@ -1,7 +1,7 @@
 # Robotics Systems-Device driver
 
 ## Description
-This device driver was created by modifying a [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor [Ryuichi Ueda](https://lab.ueda.tech/) in a lecture on [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo).
+This device driver was created by modifying a [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor [Ryuichi Ueda](https://lab.ueda.tech/) in a lecture on [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo).  
 This device driver controls a 4-wheeled vehicle according to the inputted alphabet (f, b, s, r, l).
 
 ---
