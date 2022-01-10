@@ -1,13 +1,13 @@
 # Robotics Systems-Device driver
 
 ## Description
-This device driver was created by modifying a [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor [Ryuichi Ueda](https://lab.ueda.tech/) in a lecture on [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo).  
+This device driver was created by modifying a [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor Ryuichi Ueda in a lecture on [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo).  
 This device driver controls a 4-wheeled vehicle according to the inputted alphabet (f, b, s, r, l).
 
 ---
 
 ## Environment
-Ubuntu server 20.04.3 LTS
+Ubuntu Server 20.04.3 LTS
 
 ---
 
@@ -16,11 +16,11 @@ Ubuntu server 20.04.3 LTS
 | :--: | :------: | :-------: |
 | [Raspberry Pi 4 ModelB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | 1 | [PDF](https://github.com/RyodaiArai/Robotics_Systems-Device_driver/files/7833504/raspberry-pi-4-datasheet.pdf) |
 | [L298N (Motor driver)](https://www.amazon.co.jp/-/en/VKLSVAN-Stepper-Controller-Compatible-Arduino/dp/B08B87WWHV/ref=sr_1_5) | 1 | [PDF](https://github.com/RyodaiArai/Robotics_Systems-Device_driver/files/7833507/l298.pdf)
-| [DC Motor with Wheel](https://www.amazon.co.jp/-/en/Treedix-Electric-Plastic-Arduino-Electronic/dp/B088NMV7C6/ref=sr_1_1) | 4 ||
-| AA Battery | 4 ||
-| [4 AA Battery Holder](https://www.amazon.com/abcGoodefg-Battery-Holder-Switch-Leads/dp/B071XTF3Z9/ref=sr_1_34) | 1 ||
-| Jump wire male-to-male | 1 ||
-| Jump wire male-to-female | 4 ||
+| [DC Motor with Wheel](https://www.amazon.co.jp/-/en/Treedix-Electric-Plastic-Arduino-Electronic/dp/B088NMV7C6/ref=sr_1_1) | 4 |
+| AA Battery | 4 |
+| [4 AA Battery Holder](https://www.amazon.com/abcGoodefg-Battery-Holder-Switch-Leads/dp/B071XTF3Z9/ref=sr_1_34) | 1 |
+| Jump wire male-to-male | 1 |
+| Jump wire male-to-female | 4 |
 
 ---
 
@@ -30,14 +30,14 @@ Ubuntu server 20.04.3 LTS
 ## Connection
 | GPIO | L298N | Motor | Battery Holder |
 | :--: | :---: | :---: | :-----: |
-| 22 | IN1 ||||
-| 23 | IN2 ||||
-| 24 | IN3 ||||
-| 25 | IN4 ||||
-|| OUT1 | 2 motors+ |||
-|| OUT2 | 2 motors- |||
-|| OUT3 | 2 motors- |||
-|| OUT4 | 2 motors+ |||
+| 22 | IN1 |
+| 23 | IN2 |
+| 24 | IN3 |
+| 25 | IN4 |
+|| OUT1 | 2 motors+ |
+|| OUT2 | 2 motors- |
+|| OUT3 | 2 motors- |
+|| OUT4 | 2 motors+ |
 || +12V || + (Red) |
 |GND PIN | GND || - (Black) |
 
@@ -100,7 +100,8 @@ $ make clean
 
 ## Video
 
-[<img src="https://user-images.githubusercontent.com/71488207/148650950-bebfaad0-4e61-44c5-b9ce-ca8a43426572.png" width="600px">](https://www.youtube.com/watch?v=RbxuJ0crwDw)
+[<img src="https://user-images.githubusercontent.com/71488207/148650950-bebfaad0-4e61-44c5-b9ce-ca8a43426572.png" width="600px">](https://www.youtube.com/watch?v=RbxuJ0crwDw)  
+Click on the image to play the video.(You will be redirect to the YouTube site.)
 
 ---
 
