@@ -1,8 +1,9 @@
-# Robotics Systems-Device driver
+# Robotics Systems-Device Driver
+
+---
 
 ## Description
-This device driver was created by modifying a [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor Ryuichi Ueda in a lecture on [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo).  
-This device driver controls a 4-wheeled vehicle according to the inputted alphabet (f, b, s, r, l).
+This device driver was created by modifying the [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor Ryuichi Ueda in [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo) lecture, and controls wheels according to the input alphabet (f, b, s, r, l).
 
 ---
 
@@ -51,10 +52,10 @@ Ubuntu Server 20.04.3 LTS
 
 ## Install & Build
 ```
-$ git clone https://github.com/RyodaiArai/Robotics_Systems-Device_driver
+$ git clone https://github.com/RyodaiArai/Robotics_Systems-Device_Driver
 ```
 ```
-$ cd Robotics_Systems-Device_driver
+$ cd Robotics_Systems-Device_Driver
 ```
 ```
 $ make
@@ -67,11 +68,11 @@ $ sudo chmod 666 /dev/control0
 ```
 
 ## Usage
-### Move forward
+### Forward
 ```
 $ echo f > /dev/control0
 ```
-### Move back
+### Backward
 ```
 $ echo b > /dev/control0
 ```
@@ -101,7 +102,7 @@ $ make clean
 ## Video
 
 [<img src="https://user-images.githubusercontent.com/71488207/148650950-bebfaad0-4e61-44c5-b9ce-ca8a43426572.png" width="600px">](https://www.youtube.com/watch?v=RbxuJ0crwDw)  
-Click on the image to play the video.(You will be redirect to the YouTube site.)
+Click on the image to play the video on YouTube.
 
 ---
 
@@ -111,4 +112,4 @@ Click on the image to play the video.(You will be redirect to the YouTube site.)
 ---
 
 ## Acknowledgment
-[The repository](https://github.com/MibuchiYuta/Control_DCmotor_RaspberryPi) I referred to when controlling the car. Thanks to Yuta Mibuchi.
+[The repository](https://github.com/MibuchiYuta/Control_DCmotor_RaspberryPi) I referred to when controlling wheels.Thanks to Yuta Mibuchi.
