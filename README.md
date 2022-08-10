@@ -2,7 +2,7 @@
 
 ---
 
-## Description
+## Overview
 This device driver was created by modifying the [device driver](https://github.com/ryuichiueda/robosys_device_drivers) created by Associate Professor Ryuichi Ueda in [Robotics Systems](https://www.youtube.com/watch?v=xQW8-FNuboo) lecture, and controls wheels according to the input alphabet (f, b, s, r, l).
 
 ---
@@ -12,7 +12,7 @@ Ubuntu Server 20.04.3 LTS
 
 ---
 
-## Requirements
+## Requirement
 | Name | Quantity | Datasheet |
 | :--: | :------: | :-------: |
 | [Raspberry Pi 4 ModelB](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) | 1 | [PDF](https://github.com/RyodaiArai/Robotics_Systems-Device_driver/files/7833504/raspberry-pi-4-datasheet.pdf) |
@@ -46,7 +46,6 @@ Ubuntu Server 20.04.3 LTS
 
 ## Model
 <img src="https://user-images.githubusercontent.com/71488207/148588983-0917a38b-b10c-49bf-8c56-caae8d74ad70.png" width="600px">
-<img src="https://user-images.githubusercontent.com/71488207/148589209-8408da05-e588-46f1-aab9-53dfaa98a288.png" width="600px">
 
 ---
 
@@ -108,8 +107,3 @@ Click on the image to play the video on YouTube.
 
 ## License
 [GNU General Public License v3.0](https://github.com/RyodaiArai/Robotics_Systems-Device_driver/blob/main/COPYING)
-
----
-
-## Acknowledgment
-[The repository](https://github.com/MibuchiYuta/Control_DCmotor_RaspberryPi) I referred to when controlling wheels.Thanks to Yuta Mibuchi.
