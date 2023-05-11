@@ -51,7 +51,7 @@ Ubuntu Server 20.04.3 LTS
 
 ## Install & Build
 ```
-$ git clone https://github.com/RyodaiArai/Robotics_Systems-Device_Driver
+$ git clone https://github.com/RyodaiArai/RoboticsSystems-DeviceDriver
 ```
 ```
 $ cd Robotics_Systems-Device_Driver
